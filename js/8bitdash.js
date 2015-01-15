@@ -115,16 +115,16 @@ var updateClock = function() {
     if((0 <= currentHours) && (currentHours < 6)) {
       greeting = "Good Night"
     }
-    if((6 <= currentHours) && (currentHours < 12)) {
+    else if((6 <= currentHours) && (currentHours < 12)) {
       greeting = "Good Morning"
     }
-    if((12 <= currentHours) && (currentHours < 18)) {
+    else if((12 <= currentHours) && (currentHours < 18)) {
       greeting = "Good Afternoon"
     }
-    if((18 <= currentHours) && (currentHours < 22)) {
+    else if((18 <= currentHours) && (currentHours < 22)) {
       greeting = "Good Evening"
     }
-    if((22 <= currentHours) && (currentHours < 24)) {
+    else((22 <= currentHours) && (currentHours < 24)) {
       greeting = "Sleep Well"
     }
     
@@ -134,7 +134,7 @@ var updateClock = function() {
     currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
     currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
   
-    var timeOfDay = ( currentHours < 12 ) ? "am" : "pm";
+    var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
   
     currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
     currentHours = ( currentHours == 0 ) ? 12 : currentHours;
@@ -185,6 +185,9 @@ window.onload = function() {
   });
   Mousetrap.bind("p", function() {
     window.location.href = "https://www.google.com/images"
+  });
+  Mousetrap.bind("r", function() {
+    window.location.href = "https://www.reddit.com"
   });
 }
 
