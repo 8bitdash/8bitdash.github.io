@@ -141,16 +141,16 @@ var updateClock = function() {
     if((0 <= currentHours) && (currentHours < 6)) {
       greeting = "Good Night"
     }
-    if((6 <= currentHours) && (currentHours < 12)) {
+    else if((6 <= currentHours) && (currentHours < 12)) {
       greeting = "Good Morning"
     }
-    if((12 <= currentHours) && (currentHours < 18)) {
+    else if((12 <= currentHours) && (currentHours < 18)) {
       greeting = "Good Afternoon"
     }
-    if((18 <= currentHours) && (currentHours < 22)) {
+    else if((18 <= currentHours) && (currentHours < 22)) {
       greeting = "Good Evening"
     }
-    if((22 <= currentHours) && (currentHours < 24)) {
+    else((22 <= currentHours) && (currentHours < 24)) {
       greeting = "Sleep Well"
     }
     
@@ -223,9 +223,6 @@ window.onload = function() {
   });
   Mousetrap.bind("t", function() {
     window.location.href = "https://www.twitter.com"
-  });
-  Mousetrap.bind("d", function() {
-    window.location.href = "https://www.digg.com"
   });
   Mousetrap.bind("d", function() {
     window.location.href = "https://www.digg.com"
